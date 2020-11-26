@@ -1,0 +1,222 @@
+[colors]
+;background = ${xrdb:color0:#222}
+background = #40000000
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+red = #cf000a
+green = #a3be8c
+yellow = #ebcb8b
+orange = #eba68b
+white = #e5e9f0
+magenta = #b48ead
+blue = #81a1c1
+cyan = #88c0d0
+pink = #ea4b8b
+
+; universal color
+bg = #2e3440
+fg = #fff6f6
+fg-alt = #434c5e
+trans = #00000000
+
+; accent color
+accent = #fff6f6
+accent-alt = #ea4b8b
+
+
+
+
+
+[bar/top]
+width = 100%
+height = 27
+;fixed-center = false
+
+
+;foreground = ${colors.foreground}
+background = ${colors.background}
+;line-size = 3
+;line-color = #f00
+
+
+padding-left = 0
+padding-right = 4
+module-margin-left = 4
+module-margin-right = 4
+
+font-0 = Almond Nougat:pixelsize=18
+;font-1 = Cantarell:pixelsize=12;:style=bold;0
+;font-2 = NotoColorEmoji:scale=7;0
+;font-3 = Material Icons:style=Solid:pixelsize=15;0
+font-1 = FontAwesome5Free:style=Solid:pixelsize=13
+font-2 = FontAwesome5Brands:style=Solid:pixelsize=13
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+;font-2 = siji:pixelsize=10;1
+
+modules-left = i3
+modules-right = ram cpu battery-combined date
+
+;tray-position = right
+;tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+
+
+
+
+
+
+
+
+[module/date]
+type = internal/date
+; Seconds to sleep between updates
+interval = 5
+
+time = %I:%M
+; when clicking on time
+time-alt = %Y-%m-%d
+
+format = <label>
+label = %time%
+
+format-prefix = 
+format-prefix-foreground = #3162f5
+format-prefix-padding-right = 2
+
+
+
+
+
+
+
+[module/battery-combined]
+type = custom/script
+
+exec = ~/.config/polybar/battery-combined-udev.sh
+
+
+; Will the script output continous content?
+; Default: false
+tail = true
+
+;format-prefix = fo
+;format-suffix = 
+
+
+
+
+
+
+[module/cpu]
+type = internal/cpu
+interval = 3
+format = <label> 
+
+label = %percentage% %
+
+;format-prefix =  
+;format-prefix = 
+format-prefix =  
+format-prefix-foreground = ${colors.red}
+format-prefix-padding-right = 2
+format-prefix-padding-top = 1
+
+
+
+[module/ram]
+type = internal/memory
+interval = 5
+
+format = <label>
+label = %percentage_used% %
+
+format-prefix =    
+format-prefix-foreground = #008707
+format-prefix-padding-right = 2
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-focused = %icon%
+label-focused-foreground = #c300ff
+;label-focused-background = #000
+label-focused-padding = 4
+
+label-unfocused = %icon%
+label-unfocused-padding = 4
+
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 4 
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;7
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
+label-mode = %mode%
+label-mode-padding = 8
+label-mode-background = #e60053
+
+
+
+
+[module/wireless-network]
+type = internal/network
+interface = wlp4s0
+interval = 3.0
+
+format-connected = <ramp-signal> F <label-connected>
+label-connected = %downspeed:9% %upspeed:9% %signal:4%
+label-connected-foreground = #eefafafa
+;format-connected-background = #039dfc
+ramp-signal-0 = 0
+ramp-signal-1 = 1
+ramp-signal-2 = 2
+ramp-signal-3 = 3
+ramp-signal-4 = 4
+ramp-signal-5 = 5
+
+format-disconnected = <label-disconnected>
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+
+format-packetloss = <animation-packetloss> <label-connected>
+animation-packetloss-0 = #2
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 =
+animation-packetloss-1-foreground = #000000
+animation-packetloss-framerate = 500
+
+
+
