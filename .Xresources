@@ -1,0 +1,19 @@
+URxvt.urlButton: 1
+URxvt.underlineURLs: True
+
+URxvt*depth: 32
+URxvt.background: [40]#0a0a0a
+URxvt.saveLines: 2000
+URxvt.scrollBar: False
+URxvt.scrollstyle: rxvt
+URxvt.termName: xterm-256color
+URxvt.urgentOnBell: True
+URxvt.cursorBlink: True 
+URxvt.cursorColor: #f00
+URxvt.foreground: #ffffff
+URxvt.font: xft:JetBrains Mono:pixelsize=20
+!URxvt.font: Noto Color Emoji
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+
+
