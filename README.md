@@ -1,1 +1,1 @@
-#My Archlinux configuration files
+# My Archlinux configuration files
