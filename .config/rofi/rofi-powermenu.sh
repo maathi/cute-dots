@@ -2,10 +2,10 @@
 
 
 if [ -z "$@" ]; then
-    echo -en "option1"
-    echo -en "option2"
-    echo -en "option3"
-    echo -en "option4"
+    echo -en "option1\n"
+    echo -en "option2\n"
+    echo -en "option3\n"
+    echo -en "option4\n"
 else
     if [ "$1" = "Shutdown" ]; then
         echo -en "Now\n30s\n1m"

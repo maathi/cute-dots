@@ -17,3 +17,47 @@ URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
 
 
+! black
+*.color0: #263640
+*.color8: #4a697d
+
+! red
+*.color1: #e35430
+*.color9: #e35430
+
+! green
+*.color2: #f5d65a
+*.color10: #f5d65a 
+! #57ab33
+
+! yellow
+*.color3: #f2a846
+*.color11: #f2a846
+
+! blue
+*.color4: #5692d6
+*.color12: #5692d6
+
+! magenta
+*.color5: #976eff
+*.color13: #976eff
+
+! cyan
+*.color6: #83bdde
+*.color14: #83bdde
+
+! white
+*.color7: #e0e8f3
+*.color15: #e0e8f3
+
+! Enable normal copy/paste
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+URxvt.keysym.C-M-c:    builtin-string:
+URxvt.keysym.C-M-v:    builtin-string:
+
+! Bind Ctrl-Shift-c & Ctrl-Shift-v to copy and paste
+URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56: eval:paste_clipboard
+
+
