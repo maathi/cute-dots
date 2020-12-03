@@ -47,9 +47,9 @@ battery_print() {
         fi
     else
         if [ "$battery_percent" -gt 95 ]; then
-            icon="%{F#0f0}%{F-}"
+            icon="%{F#008707}%{F-}"
         elif [ "$battery_percent" -gt 75 ]; then
-            icon="%{F#0f0}%{F-}"
+            icon="%{F#008707}%{F-}"
         elif [ "$battery_percent" -gt 65 ]; then
             icon="%{F#7fff00}%{F-}"
         elif [ "$battery_percent" -gt 35 ]; then

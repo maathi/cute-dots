@@ -102,7 +102,7 @@ format = <label>
 label = %time%
 
 format-prefix = 
-format-prefix-foreground = #3162f5
+format-prefix-foreground = ${colors.grey}
 format-prefix-padding-right = 2
 
 
