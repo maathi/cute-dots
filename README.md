@@ -1,7 +1,7 @@
 <p align="center">
-  <img width="25%" src="https://s3.amazonaws.com/intanibase/iad_characters/766.jpg" />
+  <img width="25%" src="https://i.imgur.com/XeDnWBS.jpeg" />
 </p>
 
 <p align="center">
-  <b>🎀 cote dot(s) : My Archlinux configuration files 🎀</b>
+  <b>🎀 cute dot(s) : My Archlinux configuration files 🎀</b>
 </p>
