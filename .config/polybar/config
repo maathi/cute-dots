@@ -60,16 +60,16 @@ font-2 = FontAwesome5Brands:style=Solid:pixelsize=13
 ;font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-right = ram cpu battery-combined date
+modules-right = myram cpu battery-combined date notifications
 
-;tray-position = right
-;tray-padding = 2
-;tray-background = #0063ff
+;tray-position = left
+; tray-padding = 2
+; tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
 
-;override-redirect = true
+; override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -86,7 +86,10 @@ cursor-scroll = ns-resize
 
 
 
-
+[module/notifications]
+type = custom/script
+exec = ~/.config/polybar/notifications.sh
+tail = true
 
 
 [module/date]
@@ -104,7 +107,6 @@ label = %time%
 format-prefix = 
 format-prefix-foreground = ${colors.grey}
 format-prefix-padding-right = 2
-
 
 
 
@@ -156,6 +158,12 @@ format-prefix = 
 format-prefix-foreground = #008707
 format-prefix-padding-right = 2
 
+[module/myram]
+type = custom/script
+
+exec = ./ram.sh
+
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -172,7 +180,8 @@ label-unfocused-padding = 4
 label-unfocused-foreground = ${colors.grey}
 
 label-urgent = %icon%
-label-urgent-background = ${colors.alert}
+;label-urgent-background = ${colors.alert}
+label-urgent-foreground = #ff0000
 label-urgent-padding = 4 
 
 ws-icon-0 = 1;
