@@ -1,6 +1,11 @@
+#define fonts   xft:JetBrains Mono:pixelsize=20,\
+                xft:Hack Regular Nerd Font Complete:pixelsize=12,\
+                xft:Hack Regular Nerd Font Complete Mono.ttf:pixelsize=12
+              
+
+
 URxvt.urlButton: 1
 URxvt.underlineURLs: True
-
 URxvt*depth: 32
 URxvt.background: [40]#0a0a0a
 URxvt.saveLines: 2000
@@ -11,7 +16,7 @@ URxvt.urgentOnBell: True
 URxvt.cursorBlink: True 
 URxvt.cursorColor: #f00
 URxvt.foreground: #ffffff
-URxvt.font: xft:JetBrains Mono:pixelsize=20
+URxvt.font: fonts
 !URxvt.font: Noto Color Emoji
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
@@ -22,8 +27,8 @@ URxvt.matcher.button: 1
 *.color8: #4a697d
 
 ! red
-*.color1: #e35430
-*.color9: #e35430
+*.color1: #f00
+*.color9: #f00
 
 ! green
 *.color2: #f5d65a

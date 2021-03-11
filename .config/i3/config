@@ -191,10 +191,16 @@ bindsym Mod1+r mode "resize"
 #startup commands
 ####################################
 
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/art/taj-mahal.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/anime/quite-night.jpg
 exec --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id compton
 
+
+
+
+###################################
+#modes
+###################################
 bindsym $mod+a mode "$app_launcher"
 mode "$app_launcher" {
     bindsym f exec firefox; mode "default"
@@ -243,3 +249,6 @@ assign [class="Viewnior|vlc|mpv"] $ws10
 #for_window [class="Chromium|dolphin|URxvt|Zathura|libreoffice|code-oss|Gimp|ktorrent|Viewnior"] focus
 for_window [class=".*"] focus
 for_window [title="ranger"] focus
+
+for_window [class="urxvt"] border pixel 6 
+for_window [class="feh"] fullscreen enable
