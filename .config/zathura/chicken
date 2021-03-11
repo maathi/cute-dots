@@ -1,0 +1,28 @@
+
+set recolor                     true
+set completion-group-bg         "#002b36"
+set completion-group-fg         "#839496"
+
+
+
+
+
+
+
+
+
+
+set recolor-lightcolor          "#101a2c"
+set recolor-darkcolor           "#E5E5E5"
+
+set pages-per-row 		1
+set statusbar-basename          true
+set page-padding 		1
+set adjust_window		width
+
+
+# Annotate in zathura settings
+set selection-clipboard clipboard
+map <C-n> feedkeys "o<BackSpace><BackSpace><BackSpace><BackSpace><BackSpace>exec znotes.sh $FILE <Return>"
+map <C-e> feedkeys "o<BackSpace><BackSpace><BackSpace><BackSpace><BackSpace>exec znotes.sh -e $FILE <Return>"
+map <C-v> feedkeys "o<BackSpace><BackSpace><BackSpace><BackSpace><BackSpace>exec znotes.sh -v $FILE <Return>"
