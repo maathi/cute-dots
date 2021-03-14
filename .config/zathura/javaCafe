@@ -1,0 +1,14 @@
+# Base16 Nord
+# Author: arcticicestudio
+
+
+
+
+
+
+
+set recolor-lightcolor          "#30333d"
+set recolor-darkcolor           "#ffffff"
+
+set recolor                     "true"
+set recolor-keephue             "false"
