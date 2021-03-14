@@ -7,16 +7,16 @@ set statusbar-bg                "#000"
 set statusbar-fg                "#E5E5E5"
 
 set inputbar-bg                 "#000"
-set inputbar-fg                 "#E5E5E5"
+set inputbar-fg                 "#7b00ff"
 
-set notification-bg             "#2E3440"
-set notification-fg             "#8FBCBB"
+set notification-bg             "#000"
+set notification-fg             "#00bf26"
 
-set notification-error-bg       "#2E3440"
-set notification-error-fg       "#BF616A"
+set notification-error-bg       "#000"
+set notification-error-fg       "#e3001e"
 
-set notification-warning-bg     "#2E3440"
-set notification-warning-fg     "#BF616A"
+set notification-warning-bg     "#000"
+set notification-warning-fg     "#ff0"
 
 set highlight-color             "#ff0"
 set highlight-active-color      "#0f0"
@@ -25,15 +25,15 @@ set tabbar-bg                   "#f00"
 set tabbar-fg                   "#00f"
 ; set completion-bg               "#3B4252"
 ; set completion-fg               "#81A1C1"
+ set completion-highlight-bg     "#7b00ff"
 ; set completion-highlight-fg     "#8FBCBB"
-; set completion-highlight-bg     "#81A1C1"
 
 ; set index-bg                    "#26354b"
 ; set index-fg                    "#E5E5E5"
-; set index-active-bg             "#586e75"
+ set index-active-bg             "#7b00ff"
 ; set index-active-fg             "#eee8d5"
 
-set guioptions                     "shv"
+set guioptions                     "sv"
 
 set recolor true
 set recolor-keephue                 true
