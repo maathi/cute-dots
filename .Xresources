@@ -31,17 +31,17 @@ URxvt.matcher.button: 1
 *.color9: #f00
 
 ! green
-*.color2: #f5d65a
-*.color10: #f5d65a 
+*.color2: #00bf10
+*.color10: #00bf10 
 ! #57ab33
 
 ! yellow
-*.color3: #f2a846
-*.color11: #f2a846
+*.color3: #ffee00
+*.color11: #ffee00
 
 ! blue
-*.color4: #5692d6
-*.color12: #5692d6
+*.color4: #0055ff
+*.color12: #0055ff
 
 ! magenta
 *.color5: #976eff

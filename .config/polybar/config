@@ -49,14 +49,14 @@ font-0 = Almond Nougat:pixelsize=18
 font-1 = FontAwesome5Free:style=Solid:pixelsize=13
 font-2 = FontAwesome5Brands:style=Solid:pixelsize=13
 
-modules-left = i3
-modules-right = ram temperature cpu battery-combined date notifications
+modules-left = bspwm
+modules-right = ram cpu battery-combined date notifications
 
 ; tray-position = left
 ; tray-padding = 2
 ; tray-background = #0063ff
 ; tray-reparent = true
-; wm-restack = i3
+wm-restack = bspwm
 ; override-redirect = true
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -149,6 +149,54 @@ ramp-used-3 = "%{F#f00}%{F-}"
 [module/myram]
 type = custom/script
 exec = ./ram.sh
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-foreground = #fff
+label-focused-padding = 4
+
+label-occupied = %icon%
+label-occupied-foreground = ${colors.grey}
+label-occupied-padding = 4
+
+label-urgent = %icon%
+label-urgent-foreground = #ff0000
+label-urgent-padding = 4
+
+label-empty = %icon%
+label-empty-foreground = #000000
+label-empty-padding = 4
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;7
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 0;
+
+; label-monocle = lmonocole
+; label-tiled = ltiled
+; label-fullscreen = lfullscreen
+; label-floating = lfloating
+; label-pseudotiled = lpsudotiled
+; label-locked = llocked
+; label-locked-foreground = #bd2c40
+; label-sticky = lsticky
+; label-sticky-foreground = #fba922
+; label-private = lprivate
+; label-private-foreground = #bd2c40
+; label-marked = lmarked
+
+
+
 
 
 [module/i3]

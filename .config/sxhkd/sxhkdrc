@@ -1,0 +1,120 @@
+##---BSPWM Bindings
+
+#Quit bspwm
+super + shift + Escape
+  prompt "Are you sure you would like to quit this Xsession" "bspc quit"
+
+#Restart bspwm
+alt + shift + w
+  bspc wm -r
+
+#close Window
+alt + q
+  bspc node -c
+
+# set the window state
+alt + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+alt + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#Focus on window in direction
+alt + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+#Send window to desktop and swap to desktop
+alt + shift + {0-9}
+  bspc node -d {0-9} && bspunhide && bspc desktop -f {0-9}
+
+
+#Swap nodes the tree from the current nodes parent
+super + control + {Up, Down}
+  bspc node   parent -C {forward, backward}
+
+
+#Rotate the tree from the current nodes parent
+super + control + {Right, Left}
+	bspc node   parent --rotate {90,270}
+#
+#Flip the tree from the current nodes parent
+super + control + {h,j,k,l}
+  bspc node   parent -F {vertical,horizontal,horizontal,vertical}
+#
+
+#Swap window with direction
+super + shift + {h,j,k,l}
+	bspc node -s {west,south,north,east}
+
+
+super + shift + o
+  reloadpolybar
+
+# focus on desktop
+alt + {0-9}
+  bspc desktop -f {0-9}
+
+# move to next/previous desktop
+alt + shift + {i,o}
+	bspc desktop -f {prev,next} && bspc node -f newest.local.!floating
+
+#	bspc desktop -f {prev,next} && bspc node -f newest.local.!floating
+
+#alacritty
+alt + Return
+  alacritty
+
+#rofi
+alt + space
+  rofi -show drun
+
+################################################
+#               MEDIA KEYS                     #
+################################################
+# Volume up
+XF86AudioRaiseVolume 
+	pactl set-sink-volume @DEFAULT_SINK@ +10%
+  
+# Volume down
+XF86AudioLowerVolume 
+	pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+# Volume mute/unmute
+XF86AudioMute 
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# toggle mic
+XF86AudioMicMute
+  pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# Brightness up
+XF86MonBrightnessUp
+	light -A 3
+
+# Brightnes down
+XF86MonBrightnessDown
+  light -U 3
+
+
+alt + a ; {f,t, s}
+	{firefox, thunar, transmission-gtk}
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# alternate between the tiled and monocle layout
+alt + w
+	bspc desktop -l next
+
+# focus the next/previous window in the current desktop
+alt + {bracketleft, bracketright}
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the last node/desktop
+alt + {Tab, shift + Tab}
+	bspc {node,desktop} -f last
+
+alt + p ; {o}
+	systemctl poweroff

@@ -29,7 +29,8 @@ client.background       #ffffff
 
 #eliminate title bar
 default_border none 
-
+#default_border pixel 3
+for_window [class="urxvt"] border pixel 1
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 16 
@@ -67,8 +68,9 @@ set $right l
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Return exec i3-sensible-terminal 
 
+#bindsym Mod1+Return exec i3-sensible-terminal 
+#bindsym Mod1+Return exec alacritty 
 # kill focused window
 bindsym Mod1+q kill
 # kill all open windows
@@ -191,7 +193,8 @@ bindsym Mod1+r mode "resize"
 #startup commands
 ####################################
 
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/anime/quite-night.jpg
+exec --no-startup-id sxhkd
+exec --no-startup-id feh --bg-fill ~/.config/wall.png
 exec --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id compton
 
@@ -204,6 +207,7 @@ exec --no-startup-id compton
 bindsym $mod+a mode "$app_launcher"
 mode "$app_launcher" {
     bindsym f exec firefox; mode "default"
+    bindsym l exec alacritty -e lf; mode "default"
     bindsym c exec chromium; mode "default" 
     bindsym b exec brave; mode "default" 
     bindsym t exec thunar; mode "default"
@@ -237,8 +241,9 @@ assign [class="firefox"] $ws1
 assign [class="Thunar"] $ws2 
 assign [title="ranger"] $ws2 
 assign [class="URxvt"] $ws3
+assign [class="Alacritty"] $ws3
 assign [class="code-oss"] $ws4 
-assign [class="libreoffice"] $ws5
+assign [class="libreoffice*"] $ws5
 assign [class="Zathura"] $ws6 
 assign [class="Gimp"] $ws8
 assign [class="Transmission-gtk"] $ws9
