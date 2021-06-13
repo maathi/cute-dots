@@ -1,0 +1,12 @@
+/* Blurred Color Scheme */
+@import url("colors/blurred.css");
+@import url("parts/main-window.css");
+@import url("parts/toolbar.css");
+@import url("parts/tabbar.css");
+@import url("parts/urlbar.css");
+@import url("parts/sidebar.css");
+@import url("parts/arrow-panel.css");
+@import url("parts/findbar.css");
+@import url("parts/context-menu.css");
+@import url("parts/customization-window.css");
+@import url("parts/window-controls.css");
