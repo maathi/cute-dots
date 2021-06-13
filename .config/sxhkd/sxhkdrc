@@ -52,8 +52,8 @@ super + shift + o
   reloadpolybar
 
 # focus on desktop
-alt + {0-9}
-  bspc desktop -f {0-9}
+alt + {0-9, minus, equal}
+  bspc desktop -f {0-9, A, B}
 
 # move to next/previous desktop
 alt + shift + {i,o}
@@ -116,5 +116,5 @@ alt + {bracketleft, bracketright}
 alt + {Tab, shift + Tab}
 	bspc {node,desktop} -f last
 
-alt + p ; {o}
-	systemctl poweroff
+alt + p ; {o, l}
+	{systemctl poweroff, xsecurelock}

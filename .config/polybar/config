@@ -1,6 +1,6 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #40000000
+background = #90000026
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -45,12 +45,12 @@ module-margin-right = 4
 font-0 = Almond Nougat:pixelsize=18
 ;font-1 = Cantarell:pixelsize=12;:style=bold;0
 ;font-2 = NotoColorEmoji:scale=7;0
-;font-3 = Material Icons:style=Solid:pixelsize=15;0
+font-3 = Material Icons:style=Solid:pixelsize=15;0
 font-1 = FontAwesome5Free:style=Solid:pixelsize=13
 font-2 = FontAwesome5Brands:style=Solid:pixelsize=13
 
 modules-left = bspwm
-modules-right = ram cpu battery-combined date notifications
+modules-right = ram cpu wlan battery-combined date notifications
 
 ; tray-position = left
 ; tray-padding = 2
@@ -133,6 +133,20 @@ ramp-0 = "%{F#008707}%{F-}"
 ramp-1 = "%{F#ffff00}%{F-}"
 ramp-2 = "%{F#ff0000}%{F-}"
 
+[module/wlan]
+type = internal/network
+interface = wlp4s0
+interval = 5
+
+format-connected =  <ramp-signal> <label-connected>
+label-connected =   %signal:0:3%  %{F#00b530}%{F-} %downspeed:0:3%  %{F#0070b5}%{F-} %upspeed:0:3% 
+ramp-signal-0 = "%{F#f00}%{F-}"
+ramp-signal-1 = "%{F#ffa500}%{F-}"
+ramp-signal-2 = "%{F#ff0}%{F-}"
+ramp-signal-3 = "%{F#008707}%{F-}"
+
+format-disconnected = <label-disconnected>
+label-disconnected = disconnected
 
 [module/ram]
 type = internal/memory
@@ -175,14 +189,16 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;
+ws-icon-4 = 5;
 ws-icon-5 = 6;
-ws-icon-6 = 7;7
+ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 0;
+ws-icon-10 = A;
+ws-icon-11 = B;
 
-; label-monocle = lmonocole
+;label-monocle = M
 ; label-tiled = ltiled
 ; label-fullscreen = lfullscreen
 ; label-floating = lfloating
@@ -233,36 +249,5 @@ ws-icon-9 = 10;
 label-mode = %mode%
 label-mode-padding = 8
 label-mode-background = #e60053
-
-
-
-
-[module/wireless-network]
-type = internal/network
-interface = wlp4s0
-interval = 3.0
-
-format-connected = <ramp-signal> F <label-connected>
-label-connected = %downspeed:9% %upspeed:9% %signal:4%
-label-connected-foreground = #eefafafa
-;format-connected-background = #039dfc
-ramp-signal-0 = 0
-ramp-signal-1 = 1
-ramp-signal-2 = 2
-ramp-signal-3 = 3
-ramp-signal-4 = 4
-ramp-signal-5 = 5
-
-format-disconnected = <label-disconnected>
-label-disconnected = not connected
-label-disconnected-foreground = #66ffffff
-
-format-packetloss = <animation-packetloss> <label-connected>
-animation-packetloss-0 = #2
-animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 =
-animation-packetloss-1-foreground = #000000
-animation-packetloss-framerate = 500
-
 
 

@@ -60,7 +60,7 @@ battery_print() {
             icon="%{F#f00}%{F-}"
         else
             icon="%{F#f00}%{F-}"
-	        notify-send "dude.. you gonna plug me or what!?"
+	        notify-send -u critical "dude... 😖 you gonna plug me or what!?"
         fi
 
         echo "$icon  $battery_percent %"
